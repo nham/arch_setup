@@ -1,0 +1,13 @@
+# Conky configuration for ScrotWM Bar
+
+##############################################
+#  Settings
+##############################################
+out_to_x no
+background no
+out_to_console yes
+update_interval 1
+total_run_times 0
+use_spacer none
+TEXT
+     P: ${cpu cpu0}.00%   M: ${memperc}.00%   B: ${battery}   W: ${wireless_essid wlan0} [${wireless_link_bar 5,10 wlan0}]
