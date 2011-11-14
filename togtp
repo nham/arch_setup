@@ -1,0 +1,16 @@
+#!/bin/bash
+
+tpstatestr=`xinput list-props "PS/2 Generic Mouse" | grep "Enabled"`
+tpstatestrlen=${#tpstatestr}
+TOUCHPAD_STATE=${tpstatestr:$tpstatestrlen-1}
+
+echo $TOUCHPAD_STATE
+
+if [ "$TOUCHPAD_STATE" -eq "0" ]
+then
+	TOUCHPAD_STATE=1
+else
+	TOUCHPAD_STATE=0
+fi
+
+exec xinput set-prop "PS/2 Generic Mouse" "Device Enabled" $TOUCHPAD_STATE

@@ -11,7 +11,7 @@ I commented out the "x:5:respawn:/usr/bin/slim >& /dev/null" line from near the 
 
 ## ~/.bash_profile
 
-The .bash_profile in this repo goes in my home directory and currently does two things: mount my NTFS data partition and start X.
+The .bash_profile in this repo goes in my home directory and currently does three things: add relevant stuff to my PATH, mount my NTFS data partition and start X.
 
 
 ## ~/.xinitrc
@@ -20,6 +20,7 @@ Does a few things:
 
  - calls xbindkeys to enable the brightness buttons and volume keys on my laptop.
  - calls xmodmap to swap my Caps Lock and left Ctrl
+ - sets keyboard repeat rate and delay to not suck
  - starts urxvtd
  - starts scrotwm (I'm currently unsure if the ck-launch-session and dbus-launch stuff is necessary)
 
@@ -46,3 +47,11 @@ All I've done so far is change the terminal to urxvtc and set the bar_action to 
 ## ~/.conkyrc
 
 Config for conky to work as scrotwm status bar. Basic processor/memory/battery/wifi stats.
+
+
+## ~/bin/togtp
+
+A bash script which turns my laptop touchpad off. This is a stopgap measure 
+until I take the time to figure out how to auto disable/enable the touchpad 
+when i plug in / unplug my USB mouse. For now, we simply call this on startup 
+(in xinitrc), then a simple "togtp" at terminal will toggle touchpad status.
