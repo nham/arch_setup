@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 USAGE_STR="Usage: adj_backlight.sh [inc/dec]"
 BACKLIGHT_DIR=/sys/class/backlight/dell_backlight/

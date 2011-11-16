@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 tpstatestr=`xinput list-props "PS/2 Generic Mouse" | grep "Enabled"`
 tpstatestrlen=${#tpstatestr}
