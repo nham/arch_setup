@@ -1,0 +1,47 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+!-------------------------------------------------------------------------------
+!
+!	U R X V T - Settings
+!
+URxvt*geometry:					80x25
+URxvt*foreground:				#999999
+URxvt*borderLess:				false
+URxvt*depth:					32
+URxvt*background:				#000000
+URxvt*scrollBar_right:			true
+URxvt*font:						xft:Inconsolata-10
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+
+!colors
+!black
+URxvt*color0:					#676767
+URxvt*color8:					#757575
+!red
+URxvt*color1:					#de1f1f
+URxvt*color9:					#eb2121
+!green
+URxvt*color2:					#a4db72
+URxvt*color10:					#afeb7a
+!yellow
+URxvt*color3:					#cfde31
+URxvt*color11:					#dbeb34
+!blue
+URxvt*color4:					#62c3de
+URxvt*color12:					#68ceeb
+!magenta
+URxvt*color5:					#E2BAF1
+URxvt*color13:					#ECAEE9
+!cyan
+URxvt*color6:					#21F1EA
+URxvt*color14:					#36FFFC
+!white
+URxvt*color7:					#F1F1F1
+URxvt*color15:					#FFFFFF
