@@ -10,7 +10,11 @@ umask 022
 unset TERMCAP
 unset MANPATH
 
-sudo mount -t ntfs /dev/sda8 /mnt/ntfs
+BETCHDEV=/dev/sda8
+if [[ -z `mount | grep $BETCHDEV` ]]
+then
+        sudo mount -t ntfs $BETCHDEV /mnt/betch
+fi
 
 sudo /usr/sbin/wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant.conf -B
 sudo /sbin/dhcpcd wlan0
