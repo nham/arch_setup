@@ -11,8 +11,8 @@ fi
 #unset MANPATH
 
 DUMPDEV=/dev/sda8
-if [[ -z `mount | grep $BETCHDEV` ]]
+if [[ -z `mount | grep $DUMPDEV` ]]
 then
-        sudo mount -t ntfs $BETCHDEV /mnt/betch
+        sudo mount -t ntfs $DUMPDEV /mnt/dump
 fi
 
