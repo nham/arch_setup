@@ -1,0 +1,18 @@
+umask 022
+
+if test -d /etc/profile.d; then
+	for profile in /etc/profile.d/*.sh; do
+		test -r "$profile" && . "$profile"
+	done
+	unset profile
+fi
+
+#unset TERMCAP
+#unset MANPATH
+
+DUMPDEV=/dev/sda8
+if [[ -z `mount | grep $BETCHDEV` ]]
+then
+        sudo mount -t ntfs $BETCHDEV /mnt/betch
+fi
+
